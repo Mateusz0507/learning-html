@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My first web page</title>
+        <link rel="stylesheet" href="style.css" />
+        <meta name="description" content="This is my first page" />
+    </head>
+    <body>
+        <h1>Hello! This is my first web page for testing purposes only</h1>
+        <img class="avatar" src="images/red-panda.jpg" alt="Red Panda" />
+        <p class="username">@RedPanda</p>
+        <br />
+        <p>I'm sweet!</p>
+        <p>I like <em>HTML</em></p>
+        <br />
+
+        <div>
+            <button class="btn">Click me</button>
+            <script>
+                var btn = document.querySelector(".btn");
+                var position;
+                btn.addEventListener("mouseover", function () {
+                    position ? (position = 0) : (position = 150);
+                    btn.style.transform = `translate(${position}px,0px)`;
+                    btn.style.transition = "all 0.3s ease";
+                });
+            </script>
+        </div>
+
+        <br />
+        <div>
+            <button class="btn2">Catch me</button>
+            <script>
+                var btn2 = document.querySelector(".btn2");
+                var x, y;
+                btn2.addEventListener("mouseover", function () {
+                    x = Math.random() * 0.8 * window.innerWidth;
+                    y = Math.random() * 0.6 * window.innerHeight;
+                    btn2.style.transform = `translate(${x}px,${y}px)`;
+                    btn2.style.transition = "all 0.3s ease";
+                });
+            </script>
+        </div>
+
+        <h2>Links</h2>
+        <a href="image.html" target="_blank"
+            ><img class="link" src="images/red-panda.jpg" alt="Image link"
+        /></a>
+        <p>&larr; click it</p>
+        <br class="clear" />
+        <a href="texts.html">Texts</a><br />
+        <a href="boxes.html">Boxes</a><br />
+        <a href="https://google.com" target="_blank">Google</a>
+
+        <h2>Download panda image</h2>
+        <p>Click link or image</p>
+        <a href="images/red-panda.jpg" download
+            ><img class="link" src="images/red-panda.jpg" alt="Image link"
+        /></a>
+        <a href="images/red-panda.jpg" download>Download image</a>
+
+        <br class="clear" />
+        <h2>Panda see you</h2>
+        <img class="horizontal" src="images/red-panda.jpg" alt="Red Panda" />
+    </body>
+</html>
